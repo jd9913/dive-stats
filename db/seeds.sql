@@ -10,7 +10,7 @@ VALUES
   ('Rescue Diver', 12, 12),
   ('Deep Diver', 15, 4);
 
-  INSERT INTO divers (first_name, last_name, is_instructor, certification_id)
+INSERT INTO divers (first_name, last_name, is_instructor, certification_id)
 VALUES
   ('Darya', 'Poole', TRUE, 2),
   ('Douglas', 'Fisher', FALSE, 3),
@@ -25,5 +25,20 @@ VALUES
   ('SS Yongala', POINT(-19.304703, 147.623977)),
   ('Great Blue Hole', POINT(17.316007, -87.535225)),
   ('Richelieu Rock', POINT(9.362752, 98.021727));
+
+
+INSERT INTO tags (location_id, name)
+VALUES
+  (1, 'wall'),
+  (2, 'sharks'),
+  (2, 'current'),
+  (3, 'wreck'),
+  (3, 'sharks'),
+  (5, 'sharks'),
+  (5, 'reef'),
+  (5, 'current');
+
+INSERT INTO dives (depth, dive_date, duration, diver_id, location_id)
+VALUES (100.15, NOW(), 500, 1, 1);
 
   COMMIT;
